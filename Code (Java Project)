@@ -1,45 +1,72 @@
-import java.util.*;                      // Save the java file name  of that class which conatin main method..
+// Java Project.
+import java.util.*;
 public class JavaProject {
-    String name;
-    int age,Reg_no;                      // this is basic Structure Now full project will complete within 2 months.
+    String name,Section,marks1,marks2;
+    int age,Reg_no,Roll_no;                      // this is basic Structure Now ,full project will complete within 2 months.
      float height;
      char gender;
-     JavaProject(String name,int age,int Reg_no,float height,char gender)
+     JavaProject(String name,String Section,int age,int Reg_no,int Roll_no,float height,char gender,String marks1,String marks2)
      {
          this.name=name;
+         this.Section=Section;
          this.age=age;
          this.Reg_no=Reg_no;
+         this.Roll_no=Roll_no;
          this.height=height;
          this.gender=gender;
+         this.marks1=marks1;
+         this.marks2=marks2;
      }
-
-     void DisplayPersonalDetails()
+     void displayPersonalDetails()
      {
          System.out.println("Name is: "+name);
          System.out.println("Age is: "+age);
          System.out.println("Reg_No is: "+Reg_no);
          System.out.println("Gender is: "+gender);
          System.out.println("Height  is: "+height);
+         System.out.println("Roll No is:"+Roll_no);
+         System.out.println("Section is :"+Section);
+         System.out.println("High school %:"+marks1);
+         System.out.println("Intermediate %:"+marks2);
      }
-    void ReportDetails()
+    void reportDetails()
     {
+
 
     }
      public static void main(String[] args) {
             Scanner sc=new Scanner(System.in);
-            String name=sc.nextLine();
-            int age=sc.nextInt();
-            int Reg_No=sc.nextInt();
-            float height=sc.nextFloat();
-            char gender=sc.next().charAt(0);
-            JavaProject ob1=new JavaProject(name,age,Reg_No,height,gender);
-            if(Reg_No<1||age<1)
+//            String name=sc.nextLine();
+//            int age=sc.nextInt();
+//            int Reg_No=sc.nextInt();
+//            float height=sc.nextFloat();
+//            char gender=sc.next().charAt(0);
+         System.out.println("Hi i am your personal Assistant provided by Your Student College ");
+         System.out.println("If you want to see Personal detail of student then Press 1");
+         System.out.println("If you want to see the overall Report of your student then press 2");
+         System.out.println("If you want to see your student all subject ca marks then press  3");
+         System.out.println("If you want to see Your student Mte and Ete marks in all subject then press  4");
+         System.out.println("If you want to see Your Student Attendance only  then press  5");
+         System.out.println("If you want to exit then press 6");
+         sc.nextLine();
+         System.out.println("Please enter the number according to your choice:");
+            int ch=sc.nextInt();
+            JavaProject ob1=new JavaProject("Anmol Mishra","K21PB",22,12102379,16,5.4f,'M',"80%","85%");
+            if(ob1.Reg_no<1||ob1.age<1)
             {
                 return;
             }
             else
+            switch(ch)
             {
-                ob1.DisplayPersonalDetails();
+                case 1:
+                ob1.displayPersonalDetails();
+                break;
+                case 5:
+                    System.out.println("Attendance is 90%");
+                    break;
+                case 6:
+                    return;
 
             }
         }
