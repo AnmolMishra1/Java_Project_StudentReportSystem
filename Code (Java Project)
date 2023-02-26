@@ -51,7 +51,7 @@ public class JavaProject {
          sc.nextLine();
          System.out.println("Please enter the number according to your choice:");
             int ch=sc.nextInt();
-            JavaProject ob1=new JavaProject("Anmol Mishra","K21PB",22,12102379,16,5.4f,'M',"80%","85%");
+            JavaProject ob1=new JavaProject("Nagasai Koduri","K21PB",21,12102831,17,5.4f,'M',"80%","85%");
             if(ob1.Reg_no<1||ob1.age<1)
             {
                 return;
