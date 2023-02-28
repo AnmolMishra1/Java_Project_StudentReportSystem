@@ -1,74 +1,105 @@
-// Java Project.
+
 import java.util.*;
-public class JavaProject {
-    String name,Section,marks1,marks2;
-    int age,Reg_no,Roll_no;                      // this is basic Structure Now ,full project will complete within 2 months.
-     float height;
-     char gender;
-     JavaProject(String name,String Section,int age,int Reg_no,int Roll_no,float height,char gender,String marks1,String marks2)
-     {
-         this.name=name;
-         this.Section=Section;
-         this.age=age;
-         this.Reg_no=Reg_no;
-         this.Roll_no=Roll_no;
-         this.height=height;
-         this.gender=gender;
-         this.marks1=marks1;
-         this.marks2=marks2;
-     }
-     void displayPersonalDetails()
-     {
-         System.out.println("Name is: "+name);
-         System.out.println("Age is: "+age);
-         System.out.println("Reg_No is: "+Reg_no);
-         System.out.println("Gender is: "+gender);
-         System.out.println("Height  is: "+height);
-         System.out.println("Roll No is:"+Roll_no);
-         System.out.println("Section is :"+Section);
-         System.out.println("High school %:"+marks1);
-         System.out.println("Intermediate %:"+marks2);
-     }
+public class JavaProject{
+    String name, Section, marks1, marks2;
+    int age, Reg_no, Roll_no;                      // this is basic Structure Now ,full project will complete within 2 months.
+    float height;
+    char gender;
+    int arr[][]={{30,25,25,30,30,25,20,28},{20,25,30,30,25,26,27,28}};
+    JavaProject(String name, String Section, int age, int Reg_no, int Roll_no, float height, char gender, String marks1, String marks2) {
+        this.name = name;
+        this.Section = Section;
+        this.age = age;
+        this.Reg_no = Reg_no;
+        this.Roll_no = Roll_no;
+        this.height = height;
+        this.gender = gender;
+        this.marks1 = marks1;
+        this.marks2 = marks2;
+    }
+    void displayPersonalDetails() {
+        System.out.println("Name is: " + name);
+        System.out.println("Age is: " + age);
+        System.out.println("Reg_No is: " + Reg_no);
+        System.out.println("Gender is: " + gender);
+        System.out.println("Height  is: " + height);
+        System.out.println("Roll No is:" + Roll_no);
+        System.out.println("Section is :" + Section);
+        System.out.println("High school %:" + marks1);
+        System.out.println("Intermediate %:" + marks2);
+    }
+
+
+    void caMarks() {
+        System.out.println("Marks of Java in Ca 1:"+arr[0][0]);
+        System.out.println("Marks of Java in Ca 2:"+arr[0][1]);
+        System.out.println("Marks of Java in Ca 3:"+arr[0][2]);
+        System.out.println("Marks of Daa in Ca 1:"+arr[0][3]);
+        System.out.println("Marks of Daa in Ca 2:"+arr[1][2]);
+        System.out.println("Marks of Daa in Ca 3:"+arr[1][3]);
+        System.out.println("Marks of OS in Ca 1:"+arr[0][4]);
+        System.out.println("Marks of OS in Ca 2:"+arr[0][5]);
+        System.out.println("Marks of Os in Ca 3:"+arr[0][6]);
+        System.out.println("Marks of MATH in Ca 1:"+arr[0][7]);
+        System.out.println("Marks of MATH in Ca 2:"+arr[1][1]);
+        System.out.println("Marks of MATH in Ca 3:"+arr[1][4]);
+    }
     void reportDetails()
     {
-
-
+        System.out.println("Ca marks of Java :"+(arr[0][0]+arr[0][1])/2);
     }
-     public static void main(String[] args) {
-            Scanner sc=new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 //            String name=sc.nextLine();
 //            int age=sc.nextInt();
 //            int Reg_No=sc.nextInt();
 //            float height=sc.nextFloat();
 //            char gender=sc.next().charAt(0);
-         System.out.println("Hi i am your personal Assistant provided by Your Student College ");
-         System.out.println("If you want to see Personal detail of student then Press 1");
-         System.out.println("If you want to see the overall Report of your student then press 2");
-         System.out.println("If you want to see your student all subject ca marks then press  3");
-         System.out.println("If you want to see Your student Mte and Ete marks in all subject then press  4");
-         System.out.println("If you want to see Your Student Attendance only  then press  5");
-         System.out.println("If you want to exit then press 6");
-         sc.nextLine();
-         System.out.println("Please enter the number according to your choice:");
-            int ch=sc.nextInt();
-            JavaProject ob1=new JavaProject("Nagasai Koduri","K21PB",21,12102831,17,5.4f,'M',"80%","85%");
-            if(ob1.Reg_no<1||ob1.age<1)
-            {
+        System.out.println("Welcome to Lpu Record System\nplease enter your id and password:");
+        System.out.println("User id :");
+        int ch = sc.nextInt();
+        System.out.println("Password :");
+        int dh = sc.nextInt();
+        if (ch == 12102831 && dh == 154371) {
+            System.out.println("Hi i am your personal Assistant:");
+            sc.nextLine();
+            System.out.println("If you want to see Personal detail  then Press 1");
+            System.out.println("If you want to see the overall Report  then press 2");
+            System.out.println("If you want to see your  all subject ca marks then press  3");
+            System.out.println("If you want to see Your  Mte and Ete marks in all subject then press  4");
+            System.out.println("If you want to see Your  Attendance only  then press  5");
+            System.out.println("If you want to exit then press 6");
+            sc.nextLine();
+            System.out.println("Please enter the number according to your choice:");
+            int cho = sc.nextInt();
+            JavaProject ob1 = new JavaProject("Koduri Nagasai", "K21PB", 22, 12102831, 17, 5.4f, 'M', "80%", "85%");
+            if (ob1.Reg_no < 1 || ob1.age < 1) {
                 return;
-            }
-            else
-            switch(ch)
-            {
-                case 1:
-                ob1.displayPersonalDetails();
-                break;
-                case 5:
-                    System.out.println("Attendance is 90%");
-                    break;
-                case 6:
-                    return;
+            } else
+                switch (cho)
+                {
+                    case 1:
+                        ob1.displayPersonalDetails();
+                        break;
+                    case 2:
+                        ob1.reportDetails();
+                        break;
+                    case 3:
+                        ob1.caMarks();
+                        break;
+                    case 5:
+                        System.out.println("Attendance is 90%");
+                        break;
+                    case 6:
+                        return;
 
-            }
+                }
+        }
+        else
+        {
+            System.out.println("Invalid Credential");
+            return;
         }
     }
+}
 
